@@ -7,3 +7,6 @@
 
 
 2. Second code review: currency exchange rate telegram bot with visualization and smart request support
+
+
+3. Laboratory work added: simple data analysis with pandas
