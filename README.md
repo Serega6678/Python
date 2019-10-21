@@ -5,3 +5,5 @@
 
 1. First code review: encryptor, decryptor and advanced hacking algorithm uploaded
 
+
+2. Second code review: currency exchange rate telegram bot with visualization and smart request support

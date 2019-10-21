@@ -5,6 +5,6 @@
 
 python create_db.py --database_name testing_base 
 
-python run.py --telegram ** токен telegram бота ** --fixer ** токен fixer аккаунта ** --database_name testing_base
+python run.py --telegram **токен telegram бота** --fixer **токен fixer аккаунта** --database_name testing_base
 
 Для запуска бота нужно запустить скрипт run.py.
