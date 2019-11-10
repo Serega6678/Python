@@ -1,46 +1,41 @@
 # PythonCodeReview1
 
-Программа шифрует буквы английского и русского алфавита, цифры, знаки препинания (доп задание).
+The program supports english, russian letters, digits and punctuation.
 
-Реализована поддержка n-грамм(доп задание).
+Smart decrypting is supported (N-grams).
 
+input.txt is an example article
 
-Для удобства приложены файлы input.txt, output.txt и model.txt, файл input.txt содержит большую статью, по которой построена модель model.txt, файл output.txt содержит некоторую фразу :) , зашифрованную шифром Цезаря для некоторого ключа.
+output.txt is an answer file
 
+model.txt is the model file with calculated n-grams for input.txt file
 
-Запуск программы:
+Usage:
 
-	Шифрование:
+	Encrypting:
 	
-		.\encryptor.py encode --cipher caesar --key неотрицательное число --input-file название файла со вводом --output-file название файла для вывода
+		.\encryptor.py encode --cipher caesar --key *non negative number* --input-file *input file name* --output-file *output file name*
 		
-		.\encryptor.py encode --cipher vigenere --key слово из букв поддерживаемого алфавита --input-file название файла со вводом --output-file название файла для вывода
+		.\encryptor.py encode --cipher vigenere --key *key word* --input-file *input file name* --output-file *output file name*
 		
-		аргументы --input-file и --output-file опциональны, при их отстутствии данные будут считываться/выводиться в консоль
+		--input-file and --output-file arguments are optional
 		
-	Дешифрование:
+	Decrypting:
 	
-		.\encryptor.py decode --cipher caesar --key неотрицательное число --input-file название файла со вводом --output-file название файла для вывода
+		.\encryptor.py decode --cipher caesar --key *non negative number* --input-file *input file name* --output-file *output file name*
 		
-		.\encryptor.py decode --cipher vigenere --key слово из букв поддерживаемого алфавита --input-file название файла со вводом --output-file название файла для вывода
+		.\encryptor.py decode --cipher vigenere --key *key word* --input-file *input file name* --output-file *output file name*
 		
-		аргументы --input-file и --output-file опциональны, при их отстутствии данные будут считываться/выводиться в консоль
+		--input-file and --output-file arguments are optional
 		
-	Тренировка:
+	Training model:
 	
-		.\encryptor.py train --text-file название файла со вводом --model-file название файла, куда будет сохранена информация о тексте --n-gram число, по которому будет устроена n-грамм шифровка, должно быть больше 1
+		.\encryptor.py train --text-file *input file name* --model-file *place to safe text information* --n-gram *n > 1 the base of n-gram encrypting*
 		
-		аргумент --text-file необязателен, в противном случае данные будут считываться через консоль
-		аргумент --n-gram необязателен, в случае его отстствия будет строиться частотная модель (из обязательного задания)
+		--text-file and --n-gram arguments are *optional*
 		
-	Взлом:
+	Hacking:
 	
-		.\encryptor.py hack --input-file название файла со вводом --output-file название файла для вывода --model-file название файла с моделью
+		.\encryptor.py hack --input-file *input file name* --output-file *output file name* --model-file *place where the text information was saved*
 		
-		аргументы --input-file и --output-file опциональны, при их отстутствии данные будут считываться/выводиться в консоль
-		число n, по которому строилась модель, передавать не нужно, нужно лишь дать на вход корректную модель
-		
-Если по какой-то причине при выполнении запроса включается новая консоль (у меня так на windows), то лучше запускать программу через python encryptor.py далее аругменты как и при обычном запуске.
-
-
-В таком случае все результаты вводятся с первоначальной консоли и выводятся в нее же.
+		--input-file and --output-file arguments are optional, n-gram parameter(model parameter) is not required
