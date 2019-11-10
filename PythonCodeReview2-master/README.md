@@ -1,10 +1,12 @@
 # PythonCodeReview2
 
-Для создания базы данных, хранящей курсы валют по отношению к евро по датам, нужно перед запуском программы запустить скрипт create_db.py.
-Запускать нужно лишь 1 раз, без запуска скрипта бот работать не будет. Пример запуска для моих токенов:
+Before starting, execute **create_db.py** script to create the database to store currency exchange rates to avoid unnecessary API calls
 
-python create_db.py --database_name testing_base 
+To start the bot execute **run.py** script
 
-python run.py --telegram **токен telegram бота** --fixer **токен fixer аккаунта** --database_name testing_base
+## Usage:
 
-Для запуска бота нужно запустить скрипт run.py.
+python create_db.py --database_name *database name* 
+
+python run.py --telegram *telegram bot token* --fixer *fixer account token* --database_name *database name*
+
