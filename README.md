@@ -1,4 +1,4 @@
-## MIPT python course
+## Python course
 
 **Welcome to this repository,** here you'll find my python course work
 
